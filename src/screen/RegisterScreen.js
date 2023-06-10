@@ -104,12 +104,13 @@ const RegisterScreen = () => {
           value={mobile}
           setValue={setMobile}
         />
-
-        <Costuminput
-          placeholder="Email address"
-          value={email}
-          setValue={setEmail}
-        />
+        <View style={{marginVertical: 5}}>
+          <Costuminput
+            placeholder="Email address"
+            value={email}
+            setValue={setEmail}
+          />
+        </View>
 
         {/* <Costuminput
         placeholder="Password"
@@ -134,13 +135,25 @@ const RegisterScreen = () => {
 
         <Costumbutton text="Next" onPress={onSignupPressed} />
         {/* <Costumbutton text="Forgot Password ?" onPress={onForgotPasswordPress} type="3" /> */}
-        <View style={{alignSelf: 'center'}}>
+        {/* <View style={{alignSelf: 'center'}}>
           <Text style={styles.text}>
             Already a member
             <TouchableOpacity onPress={login}>
               <Text style={styles.text1}> log in </Text>
             </TouchableOpacity>
           </Text>
+        </View> */}
+
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'row',
+          }}>
+          <Text style={styles.text}>Already a member</Text>
+          <TouchableOpacity onPress={login}>
+            <Text style={[styles.text1, {left: 3}]}> log in</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </ImageBackground>
@@ -199,6 +212,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     margin: 0,
     alignSelf: 'center',
+    marginVertical: 10,
   },
   one: {
     flex: 0.438,

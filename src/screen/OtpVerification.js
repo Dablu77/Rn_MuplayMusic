@@ -28,7 +28,7 @@ const OtpVerification = ({navigation}) => {
 
   const onSignInPressed = () => {
     console.warn('Sign in');
-    navigation.navigate('RegisterScreen');
+    navigation.navigate('TabNavigation');
 
     //  navigation.navigate("Home");
   };

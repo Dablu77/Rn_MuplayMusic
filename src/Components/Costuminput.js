@@ -25,23 +25,20 @@ const Costuminput = ({value, setValue, placeholder, secureTextEntry}) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-
     width: '80%',
     alignSelf: 'center',
     borderColor: '#e8e8e8',
     borderWidth: 1,
     borderRadius: 7,
     maxHeight: '100%',
+    justifyContent: 'center',
 
     paddingHorizontal: 10,
-    marginVertical: 5,
-    paddingTop: 5,
-    paddingBottom: 12,
-    marginBottom: 15,
-    // marginTop: 5,
+    // marginBottom: 15,
+    // marginVertical: 10,
+    marginTop: 10,
   },
   TextInput: {
-    marginTop: 8,
     color: '#000',
   },
 });

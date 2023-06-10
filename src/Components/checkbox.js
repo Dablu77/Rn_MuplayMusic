@@ -35,6 +35,7 @@ function CheckBox({title, checked, onPress}) {
 const styles = StyleSheet.create({
   t: {
     color: 'silver',
+    left: 8,
   },
 });
 export default CheckBox;

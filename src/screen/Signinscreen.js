@@ -87,26 +87,53 @@ const Signinscreen = () => {
 
         <Costumbutton text="Next" onPress={onSignInPressed} />
         {/* <Costumbutton text="Forgot Password ?" onPress={onForgotPasswordPress} type="3" /> */}
-        <View style={{alignSelf: 'center'}}>
+        <View
+          style={{
+            alignSelf: 'center',
+            justifyContent: 'center',
+            flexDirection: 'row',
+            marginTop: 5,
+            flexWrap: 'wrap',
+            marginHorizontal: 20,
+          }}>
           <Text style={styles.text}>
             By registering to this app, you accept our
-            <TouchableOpacity onPress={() => navigation.navigate('TermsofUse')}>
-              <Text style={styles.text1}> Terms of Use </Text>
-            </TouchableOpacity>
-            and our
-            <TouchableOpacity
-              onPress={() => navigation.navigate('PrivacyPolicy')}>
-              <Text style={styles.text1}>Privacy Policy</Text>
-            </TouchableOpacity>
-            .
           </Text>
-        </View>
-        <Text style={styles.text}>
-          Not a member?
-          <TouchableOpacity onPress={onSignupPress}>
-            <Text style={styles.text1}> Register</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('TermsofUse')}>
+            <Text style={styles.text1}> Terms of Use </Text>
           </TouchableOpacity>
-        </Text>
+          <Text style={styles.text}> and our </Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('PrivacyPolicy')}>
+            <Text style={styles.text1}> Privacy Policy</Text>
+          </TouchableOpacity>
+        </View>
+        {/* <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'grey',
+          }}>
+          <Text style={styles.text}>
+            Not a member?
+            <TouchableOpacity onPress={onSignupPress}>
+              <Text style={styles.text1}> Register</Text>
+            </TouchableOpacity>
+          </Text>
+        </View> */}
+
+        <View
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'row',
+            marginTop: 10,
+          }}>
+          <Text style={styles.text}>Not a member?</Text>
+          <TouchableOpacity onPress={onSignupPress}>
+            <Text style={[styles.text1, {left: 3}]}> Register</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </ImageBackground>
   );
@@ -127,7 +154,8 @@ const styles = StyleSheet.create({
   text1: {
     color: 'red',
     fontSize: 13,
-    paddingTop: 10,
+    // paddingTop: 10,
+    // top: 20,
   },
   c: {
     alignSelf: 'center',
